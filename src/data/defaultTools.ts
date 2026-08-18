@@ -39,7 +39,7 @@ export const DEFAULT_PLANNING_TOOLS: PlanningTool[] = [
     id: 'export-backorder',
     name: 'Export Backorder',
     shortName: 'Export Backorder',
-    url: 'https://aceybrimshore.github.io/Export-Backorder/',
+    url: 'https://aceybrimshore.github.io/Export-Backorder-V2/',
     description: 'Generate formatted reports for pending fulfillment items.',
     category: 'reporting',
     icon: 'Download',
