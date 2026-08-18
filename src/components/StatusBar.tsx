@@ -13,22 +13,9 @@ export const StatusBar: React.FC = () => {
           <span>SYSTEM HEALTH: OPERATIONAL</span>
         </div>
 
-        {/* Center: Version info */}
+        {/* Right: Version info */}
         <div className="text-slate-400">
           <span>CENTRALIZED PLANNING INTERFACE V1.0.0</span>
-        </div>
-
-        {/* Right: GitHub profile link */}
-        <div className="text-slate-400 flex items-center gap-1">
-          <span>GITHUB LINKED:</span>
-          <a
-            href="https://github.com/aceybrimshore"
-            target="_blank"
-            rel="noreferrer"
-            className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
-          >
-            ACEYBRIMSHORE
-          </a>
         </div>
       </div>
     </footer>
