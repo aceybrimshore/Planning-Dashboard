@@ -18,7 +18,31 @@ export default function App() {
       try {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          // Merge with DEFAULT_PLANNING_TOOLS to ensure updated default URLs are immediately active
+          const defaultMap = new Map(DEFAULT_PLANNING_TOOLS.map((t) => [t.id, t]));
+          const merged = parsed.map((item: PlanningTool) => {
+            if (defaultMap.has(item.id) && !item.isCustom) {
+              const defaultTool = defaultMap.get(item.id)!;
+              return {
+                ...item,
+                url: defaultTool.url,
+                name: defaultTool.name,
+                description: defaultTool.description,
+                badge: defaultTool.badge,
+                footerStat: defaultTool.footerStat,
+              };
+            }
+            return item;
+          });
+
+          // Ensure any newly added default tools are also present
+          DEFAULT_PLANNING_TOOLS.forEach((defTool) => {
+            if (!merged.some((m: PlanningTool) => m.id === defTool.id)) {
+              merged.push(defTool);
+            }
+          });
+
+          return merged;
         }
       } catch (e) {
         console.error('Failed to parse saved custom tools', e);
