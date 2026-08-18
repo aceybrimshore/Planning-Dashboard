@@ -1,0 +1,6 @@
+{
+  "name": "Planning Tools Hub",
+  "description": "Centralized dashboard and unified workspace linking CSV Upload, Scheduling, Export Backorder, and Backorder planning tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
