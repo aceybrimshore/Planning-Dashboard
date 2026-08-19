@@ -35,6 +35,8 @@ export const OverviewHub: React.FC<OverviewHubProps> = ({
             iconBg = 'bg-amber-50 text-amber-600 border-amber-100';
           } else if (tool.id === 'backorder-mgmt' || tool.category === 'backorder') {
             iconBg = 'bg-rose-50 text-rose-600 border-rose-100';
+          } else if (tool.id === 'material-gap-risk' || tool.category === 'analysis') {
+            iconBg = 'bg-indigo-50 text-indigo-600 border-indigo-100';
           }
 
           return (

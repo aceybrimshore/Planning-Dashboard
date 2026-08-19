@@ -56,6 +56,10 @@ export const getToolIcon = (iconName: string, className = 'w-5 h-5') => {
       return <FileSpreadsheet className={className} />;
     case 'Boxes':
       return <Boxes className={className} />;
+    case 'AlertTriangle':
+      return <AlertTriangle className={className} />;
+    case 'Activity':
+      return <Activity className={className} />;
     default:
       return <Layers className={className} />;
   }

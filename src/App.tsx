@@ -60,7 +60,15 @@ export default function App() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        if (Array.isArray(parsed)) return parsed;
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const mergedSteps = [...parsed];
+          DEFAULT_WORKFLOW_STEPS.forEach((defStep) => {
+            if (!mergedSteps.some((s) => s.id === defStep.id || s.toolId === defStep.toolId)) {
+              mergedSteps.push(defStep);
+            }
+          });
+          return mergedSteps;
+        }
       } catch (e) {
         console.error('Failed to parse saved workflow steps', e);
       }

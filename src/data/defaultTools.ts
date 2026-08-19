@@ -65,6 +65,23 @@ export const DEFAULT_PLANNING_TOOLS: PlanningTool[] = [
     accentColor: 'rose',
     tags: ['Inventory', 'Alerts', 'Backorder', 'Status'],
   },
+  {
+    id: 'material-gap-risk',
+    name: 'Material Gap & Production Risk Analyzer',
+    shortName: 'Risk Analyzer',
+    url: 'https://aceybrimshore.github.io/Material-Gap-Production-Risk-Analyzer/',
+    description: 'Identify component shortages, BOM gaps, and production bottleneck risks.',
+    category: 'analysis',
+    icon: 'AlertTriangle',
+    badge: {
+      text: 'Live',
+      variant: 'live',
+    },
+    footerStat: 'Real-time gap detection',
+    workflowStep: 5,
+    accentColor: 'indigo',
+    tags: ['BOM', 'Shortages', 'Risk', 'Production', 'Material Gap'],
+  },
 ];
 
 export const DEFAULT_WORKFLOW_STEPS: WorkflowItem[] = [
@@ -103,5 +120,14 @@ export const DEFAULT_WORKFLOW_STEPS: WorkflowItem[] = [
     notes: 'Download formatted reports for logistics and vendor dispatch.',
     priority: 'Medium',
     status: 'Ready for Export',
+  },
+  {
+    id: 'step-5',
+    title: '5. Analyze Material Gaps & Production Risks',
+    toolId: 'material-gap-risk',
+    completed: false,
+    notes: 'Detect component shortages and assess production risk impact.',
+    priority: 'High',
+    status: 'Gap Monitor Active',
   },
 ];

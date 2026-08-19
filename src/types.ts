@@ -4,8 +4,8 @@ export interface PlanningTool {
   shortName: string;
   url: string;
   description: string;
-  category: 'ingestion' | 'scheduling' | 'backorder' | 'reporting' | 'custom';
-  icon: 'UploadCloud' | 'Calendar' | 'Download' | 'ClipboardList' | 'FileSpreadsheet' | 'Boxes' | 'Layers';
+  category: 'ingestion' | 'scheduling' | 'backorder' | 'reporting' | 'analysis' | 'custom';
+  icon: 'UploadCloud' | 'Calendar' | 'Download' | 'ClipboardList' | 'FileSpreadsheet' | 'Boxes' | 'Layers' | 'AlertTriangle' | 'Activity';
   badge?: {
     text: string;
     variant: 'default' | 'live' | 'critical' | 'version' | 'ready';
